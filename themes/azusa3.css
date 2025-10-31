@@ -17,7 +17,7 @@
   --color-border: #3a3b3d;
 
   /* Accent Colors for text */
-  --color-accent-green: #5ae08e;
+  --color-accent: #5ae08e;
   --color-blue: #7abbff;
   --color-red: #f82c7b;
   --color-pink: #fc68c5;
@@ -49,17 +49,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Accent color in headings (bold text) */
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
-  color: var(--color-accent-green);
+  color: var(--color-accent);
 }
 
 /* Links */
 a {
-  color: var(--color-accent-green);
+  color: var(--color-accent);
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid var(--color-accent-green);
+  border-left: 4px solid var(--color-accent);
   color: var(--color-off-white);
 }
 
@@ -185,7 +185,7 @@ hr {
   all: unset;
   display: block;
   width: 100%;
-  border-bottom: 3px solid var(--color-accent-green);
+  border-bottom: 3px solid var(--color-accent);
 }
 
 /* Tables */
@@ -447,7 +447,11 @@ section:has(div.v-center) {
 }
 
 /* Text Color Classes */
-/* text-red and text-blue: affect all content including headings */
+.text-accent,
+.text-accent * {
+  color: var(--color-accent);
+}
+
 .text-red,
 .text-red * {
   color: var(--color-red);
@@ -456,6 +460,21 @@ section:has(div.v-center) {
 .text-blue,
 .text-blue * {
   color: var(--color-blue);
+}
+
+.text-pink,
+.text-pink * {
+  color: var(--color-pink);
+}
+
+.text-green,
+.text-green * {
+  color: var(--color-green);
+}
+
+.text-purple,
+.text-purple * {
+  color: var(--color-purple);
 }
 
 /* Code Style Layout */
