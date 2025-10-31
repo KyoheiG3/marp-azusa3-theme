@@ -12,14 +12,17 @@
   /* Azusa3 Color Palette */
   --color-bg-dark: #191a1c;
   --color-text-light: #eeeddc;
-  --color-accent-green: #a7ffa7;
   --color-off-white: #fcfdf2;
   --color-bg-section: #2a2b2d;
   --color-border: #3a3b3d;
 
   /* Accent Colors for text */
+  --color-accent-green: #5ae08e;
   --color-blue: #7abbff;
   --color-red: #f82c7b;
+  --color-pink: #fc68c5;
+  --color-green: #19af77;
+  --color-purple: #5d6cec;
 }
 
 /* Base Styles - Override default theme */
@@ -63,7 +66,7 @@ blockquote {
 /* Code */
 code {
   background-color: #2a2b2d;
-  color: #eeeddc;
+  color: #569cd6;
 }
 
 pre {
@@ -289,9 +292,15 @@ section.image-left {
   grid-template-rows: auto 1fr;
 }
 
-section.image-right h1,
-section.image-left h1 {
+section.image-right > h1,
+section.image-left > h1 {
   grid-column: 1 / -1;
+}
+
+/* Apply negative margin to image container only when there is no heading */
+section.image-right:not(:has(> h1)) > p,
+section.image-left:not(:has(> h1)) > p {
+  margin-top: -40px !important;
 }
 
 /* Image container */
@@ -321,7 +330,9 @@ section.image-left > p br {
 section.image-right > ul,
 section.image-right > ol,
 section.image-left > ul,
-section.image-left > ol {
+section.image-left > ol,
+section.image-right > .content,
+section.image-left > .content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -331,16 +342,18 @@ section.image-left > ol {
 section.image-right > p {
   grid-column: 2;
   grid-row: 2;
+  margin-right: -40px;
 }
 
 /* Reset margins */
 section.image-right > p,
 section.image-left > p {
-  margin-bottom: 0;
+  margin-bottom: -40px;
 }
 
 section.image-right > ul,
-section.image-right > ol {
+section.image-right > ol,
+section.image-right > .content {
   grid-column: 1;
   grid-row: 2;
 }
@@ -349,10 +362,12 @@ section.image-right > ol {
 section.image-left > p {
   grid-column: 1;
   grid-row: 2;
+  margin-left: -40px;
 }
 
 section.image-left > ul,
-section.image-left > ol {
+section.image-left > ol,
+section.image-left > .content {
   grid-column: 2;
   grid-row: 2;
 }
