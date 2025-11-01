@@ -12,7 +12,6 @@
   /* Azusa3 Color Palette */
   --color-bg-dark: #191a1c;
   --color-text-light: #eeeddc;
-  --color-text-disable: #5a5b5d;
   --color-off-white: #fcfdf2;
   --color-bg-section: #2a2b2d;
   --color-border: #3a3b3d;
@@ -222,9 +221,13 @@ section h2,
 section h3,
 section h4,
 section h5,
-section h6 {
+section h6,
+section p,
+section blockquote,
+section table {
   margin-top: 0;
   margin-left: 12px;
+  margin-right: 12px;
 }
 
 section ol,
@@ -264,6 +267,10 @@ section.section h1 {
   font-size: 60px;
 }
 
+section.section p {
+  opacity: 0.8;
+}
+
 /* Header Layout */
 section:has(header:not(:empty)) {
   padding-top: 80px;
@@ -283,7 +290,7 @@ section.title {
 
 section.agenda ul,
 section.agenda ol {
-  color: var(--color-text-disable);
+  color: var(--color-text-light);
   font-size: 48px;
   font-weight: 600;
   line-height: 1.5;
@@ -291,8 +298,8 @@ section.agenda ol {
   margin-bottom: auto !important;
 }
 
-section.agenda li:has(strong) {
-  color: var(--color-text-light);
+section.agenda li:not(:has(strong)) {
+  opacity: 0.4;
 }
 
 section:not(.title):not(.section):not(.centered) > h1:first-child {
