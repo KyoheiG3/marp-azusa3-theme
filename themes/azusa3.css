@@ -12,6 +12,7 @@
   /* Azusa3 Color Palette */
   --color-bg-dark: #191a1c;
   --color-text-light: #eeeddc;
+  --color-text-disable: #5a5b5d;
   --color-off-white: #fcfdf2;
   --color-bg-section: #2a2b2d;
   --color-border: #3a3b3d;
@@ -31,7 +32,7 @@ section {
   color: var(--color-text-light);
   font-family: 'Montserrat', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
   line-height: 1.2;
-  padding: 40px;
+  padding: 40px 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start !important;
@@ -41,10 +42,8 @@ section {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-light);
-  font-weight: 800;
+  font-weight: bold;
   letter-spacing: -0.025em;
-  margin-block: 12px;
-  padding-bottom: 0;
 }
 
 /* Accent color in headings (bold text) */
@@ -61,12 +60,13 @@ a {
 blockquote {
   border-left: 4px solid var(--color-accent);
   color: var(--color-off-white);
+  font-style: italic;
 }
 
 /* Code */
 code {
-  background-color: #2a2b2d;
-  color: #569cd6;
+  background-color: var(--color-bg-section);
+  color: var(--color-off-white);
 }
 
 pre {
@@ -217,21 +217,37 @@ section::after {
 }
 
 /* ==================== Layout Classes ==================== */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  margin-top: 0;
+  margin-left: 12px;
+}
+
+section ol,
+section ul {
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+section li {
+  padding-inline-start: 4px;
+}
 
 /* Title Page Layout */
 section.title {
   display: flex;
   justify-content: center !important;
-  text-align: center;
 }
 
 section.title h1 {
-  font-size: 72px;
-  margin: 40px 0;
+  font-size: 92px;
 }
 
 section.title p {
-  font-size: 24px;
   color: var(--color-off-white);
   opacity: 0.8;
   margin-top: 20px;
@@ -241,12 +257,11 @@ section.title p {
 section.section {
   display: flex;
   justify-content: center !important;
-  background-color: var(--color-bg-section);
+  text-align: center;
 }
 
-section.section p {
-  font-size: 30px;
-  line-height: 1.8;
+section.section h1 {
+  font-size: 60px;
 }
 
 /* Header Layout */
@@ -262,9 +277,46 @@ section.no-header {
   padding-top: 40px !important;
 }
 
-section.title,
-section.section {
+section.title {
   padding-top: 40px !important;
+}
+
+section.agenda ul,
+section.agenda ol {
+  color: var(--color-text-disable);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+section.agenda li:has(strong) {
+  color: var(--color-text-light);
+}
+
+section:not(.title):not(.section):not(.centered) > h1:first-child {
+  border-bottom: var(--color-accent) solid 3px;
+  padding: 0 0 12px 12px;
+  margin: 0 0 36px 0;
+}
+
+section:not(.title):not(.section):not(.centered):not(.agenda) > h2:first-child {
+  border-left: var(--color-accent) solid 8px;
+  padding: 12px 32px;
+  margin: 0 0 32px 12px;
+}
+
+section:not(.title):not(.section):not(.centered) > h3:first-child {
+  width: fit-content;
+  border-bottom: var(--color-accent) solid 3px;
+  padding: 0 0 8px 8px;
+  margin: 0 0 24px 0;
+}
+
+section.detail > p {
+  padding: 36px;
+  font-size: 36px;
 }
 
 /* Image Layout - Centers images horizontally and vertically */
@@ -282,6 +334,19 @@ section.image p:has(img) {
 section.image img {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* Table Layout - Centers table horizontally and vertically */
+section.table table {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+section.table table th,
+section.table table td {
+  padding: 16px 24px;
 }
 
 /* Image Right/Left Layout - Grid based */
@@ -399,25 +464,33 @@ section.image-left.content-80 {
 }
 
 /* Column Layout */
-section.column-layout {
+section.column {
   flex-direction: row !important;
   flex-wrap: wrap;
   gap: 40px;
   row-gap: 0;
 }
 
-section.column-layout > h1,
-section.column-layout > h2,
-section.column-layout > h3,
-section.column-layout > h4,
-section.column-layout > h5,
-section.column-layout > h6 {
+section.column > h1,
+section.column > h2,
+section.column > h3,
+section.column > h4,
+section.column > h5,
+section.column > h6 {
   flex: 0 0 100%;
 }
 
-section.column-layout > div.column {
+section.column > div.column {
   flex: 1 1 0;
   min-width: 0;
+}
+
+section.centered {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 /* Text Alignment Classes */
