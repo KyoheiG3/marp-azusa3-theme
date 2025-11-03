@@ -1,0 +1,461 @@
+/**
+ * @theme azusa3
+ * @auto-scaling true
+ * @author Kyohei Ito
+ * @description Azusa3 theme for Marp - A minimal, elegant theme with warm dark colors
+ * Inspired by https://azusa3.sanographix.net/
+ */
+
+@import 'default';
+
+:root {
+  /* Azusa3 Color Palette */
+  --color-bg-dark: #191a1c;
+  --color-text-light: #eeeddc;
+  --color-accent-green: #a7ffa7;
+  --color-off-white: #fcfdf2;
+  --color-bg-section: #2a2b2d;
+  --color-border: #3a3b3d;
+
+  /* Accent Colors for text */
+  --color-blue: #7abbff;
+  --color-red: #f82c7b;
+}
+
+/* Base Styles - Override default theme */
+section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  font-family: 'Montserrat', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  line-height: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-light);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-block: 12px;
+  padding-bottom: 0;
+}
+
+/* Accent color in headings (bold text) */
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  color: var(--color-accent-green);
+}
+
+/* Links */
+a {
+  color: var(--color-accent-green);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-accent-green);
+  color: var(--color-off-white);
+}
+
+/* Code */
+code {
+  background-color: #2a2b2d;
+  color: #eeeddc;
+}
+
+pre {
+  background-color: #2a2b2d;
+  border: none;
+}
+
+pre code {
+  color: #d4d4d4;
+}
+
+/* Syntax Highlighting - VS Code Dark+ Theme */
+pre code .hljs-comment,
+pre code .hljs-quote {
+  color: #6a9955;
+  font-style: italic;
+}
+
+pre code .hljs-keyword,
+pre code .hljs-selector-tag,
+pre code .hljs-literal,
+pre code .hljs-type {
+  color: #569cd6;
+}
+
+pre code .hljs-number {
+  color: #b5cea8;
+}
+
+pre code .hljs-string,
+pre code .hljs-doctag {
+  color: #ce9178;
+}
+
+pre code .hljs-attr {
+  color: #9cdcfe;
+}
+
+pre code .hljs-variable,
+pre code .hljs-template-variable,
+pre code .hljs-name,
+pre code .hljs-property {
+  color: #9cdcfe;
+}
+
+/* Template literal substitutions - style as string interpolation */
+pre code .hljs-subst {
+  color: #9cdcfe;
+}
+
+pre code .hljs-title,
+pre code .hljs-section,
+pre code .hljs-selector-id,
+pre code .hljs-function .hljs-title {
+  color: #dcdcaa;
+}
+
+pre code .hljs-class .hljs-title,
+pre code .hljs-title.class_ {
+  color: #4ec9b0;
+}
+
+pre code .hljs-tag {
+  color: #569cd6;
+}
+
+pre code .hljs-attribute {
+  color: #9cdcfe;
+}
+
+pre code .hljs-regexp,
+pre code .hljs-link {
+  color: #d16969;
+}
+
+pre code .hljs-symbol,
+pre code .hljs-bullet {
+  color: #4fc1ff;
+}
+
+pre code .hljs-built_in,
+pre code .hljs-builtin-name {
+  color: #4ec9b0;
+}
+
+pre code .hljs-meta {
+  color: #808080;
+}
+
+pre code .hljs-deletion {
+  background: #490b11;
+  color: #d16969;
+}
+
+pre code .hljs-addition {
+  background: #0b4911;
+  color: #b5cea8;
+}
+
+pre code .hljs-emphasis {
+  font-style: italic;
+  color: #9cdcfe;
+}
+
+pre code .hljs-strong {
+  font-weight: bold;
+  color: #4ec9b0;
+}
+
+pre code .hljs-params {
+  color: #9cdcfe;
+}
+
+/* Horizontal Rule */
+hr {
+  all: unset;
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid var(--color-accent-green);
+}
+
+/* Tables */
+th {
+  border-color: var(--color-border);
+  background-color: var(--color-text-light);
+  color: var(--color-bg-dark);
+  font-weight: bold;
+}
+
+td {
+  border-color: var(--color-border);
+  background-color: var(--color-bg-section);
+  font-weight: normal;
+}
+
+/* Header & Footer */
+header, footer {
+  color: var(--color-off-white);
+  opacity: 0.7;
+  font-size: 24px;
+}
+
+/* Pagination */
+section::after {
+  color: var(--color-off-white);
+  opacity: 0.7;
+  font-size: 24px;
+}
+
+/* ==================== Layout Classes ==================== */
+
+/* Title Page Layout */
+section.title {
+  display: flex;
+  justify-content: center !important;
+  text-align: center;
+}
+
+section.title h1 {
+  font-size: 72px;
+  margin: 40px 0;
+}
+
+section.title p {
+  font-size: 24px;
+  color: var(--color-off-white);
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+/* Section Page Layout */
+section.section {
+  display: flex;
+  justify-content: center !important;
+  background-color: var(--color-bg-section);
+}
+
+section.section p {
+  font-size: 30px;
+  line-height: 1.8;
+}
+
+/* Header Layout */
+section:has(header:not(:empty)) {
+  padding-top: 80px;
+}
+
+section.no-header header {
+  display: none;
+}
+
+section.no-header {
+  padding-top: 40px !important;
+}
+
+section.title,
+section.section {
+  padding-top: 40px !important;
+}
+
+/* Image Layout - Centers images horizontally and vertically */
+section.image {
+  display: flex !important;
+}
+
+/* Image container for multiple images */
+section.image p:has(img) {
+  display: flex !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+section.image img {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Image Right/Left Layout - Grid based */
+section.image-right,
+section.image-left {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+section.image-right h1,
+section.image-left h1 {
+  grid-column: 1 / -1;
+}
+
+/* Image container */
+section.image-right > p,
+section.image-left > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-section);
+}
+
+section.image-right img,
+section.image-left img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Hide br tags only in image layouts */
+section.image-right > p br,
+section.image-left > p br {
+  display: none;
+}
+
+/* Text container */
+section.image-right > ul,
+section.image-right > ol,
+section.image-left > ul,
+section.image-left > ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Right layout - text left (column 1), image right (column 2) */
+section.image-right > p {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Reset margins */
+section.image-right > p,
+section.image-left > p {
+  margin-bottom: 0;
+}
+
+section.image-right > ul,
+section.image-right > ol {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Left layout - image left (column 1), text right (column 2) */
+section.image-left > p {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+section.image-left > ul,
+section.image-left > ol {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Width adjustments - Grid columns */
+section.image-right.content-30,
+section.image-left.content-30 {
+  grid-template-columns: 30fr 70fr;
+}
+
+section.image-right.content-40,
+section.image-left.content-40 {
+  grid-template-columns: 40fr 60fr;
+}
+
+section.image-right.content-60,
+section.image-left.content-60 {
+  grid-template-columns: 60fr 40fr;
+}
+
+section.image-right.content-70,
+section.image-left.content-70 {
+  grid-template-columns: 70fr 30fr;
+}
+
+section.image-right.content-80,
+section.image-left.content-80 {
+  grid-template-columns: 80fr 20fr;
+}
+
+/* Column Layout */
+section.column-layout {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 0;
+}
+
+section.column-layout > h1,
+section.column-layout > h2,
+section.column-layout > h3,
+section.column-layout > h4,
+section.column-layout > h5,
+section.column-layout > h6 {
+  flex: 0 0 100%;
+}
+
+section.column-layout > div.column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Text Alignment Classes */
+/* Horizontal center alignment */
+div.h-center,
+div.h-center * {
+  text-align: center !important;
+}
+
+div.h-center img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Vertical center alignment */
+div.v-center {
+  display: block !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+/* Parent section needs to be flex for v-center to work */
+section:has(div.v-center) {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Text Color Classes */
+/* text-red and text-blue: affect all content including headings */
+.text-red,
+.text-red * {
+  color: var(--color-red);
+}
+
+.text-blue,
+.text-blue * {
+  color: var(--color-blue);
+}
+
+/* Code Style Layout */
+section.code {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0 !important;
+}
+
+section.code pre {
+  flex: 1;
+  margin: 0 -40px;
+  padding: 20px 40px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
