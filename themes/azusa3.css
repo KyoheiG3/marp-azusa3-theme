@@ -189,14 +189,16 @@ hr {
 
 /* Tables */
 th {
-  border-color: var(--color-border);
+  border: 2px solid var(--color-border) !important;
+  border-color: var(--color-border) !important;
   background-color: var(--color-text-light);
   color: var(--color-bg-dark);
   font-weight: bold;
 }
 
 td {
-  border-color: var(--color-border);
+  border: 2px solid var(--color-border) !important;
+  border-color: var(--color-border) !important;
   background-color: var(--color-bg-section);
   font-weight: normal;
 }
