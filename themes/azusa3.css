@@ -190,10 +190,23 @@ hr {
 
 /* Tables */
 th {
-  border: 2px solid var(--color-border) !important;
+  border: 1px solid var(--color-bg-section) !important;
   background-color: var(--color-text-light);
   color: var(--color-bg-dark);
   font-weight: bold;
+}
+
+th:first-child {
+  border-left-color: var(--color-text-light) !important;
+}
+
+th:last-child {
+  border-right-color: var(--color-text-light) !important;
+}
+
+th {
+  border-top-color: var(--color-text-light) !important;
+  border-bottom-color: var(--color-text-light) !important;
 }
 
 td {
