@@ -11,6 +11,7 @@
 :root {
   /* Azusa3 Color Palette */
   --color-bg-dark: #191a1c;
+  --color-bg-code: #1f1f1f;
   --color-text-light: #eeeddc;
   --color-off-white: #fcfdf2;
   --color-bg-section: #2a2b2d;
@@ -593,9 +594,11 @@ section.code {
 }
 
 section.code pre {
+  background-color: var(--color-bg-code);
+  border: 20px solid var(--color-border);
   flex: 1;
-  margin: 0 -40px;
-  padding: 20px 40px;
+  margin: 0 -20px;
+  padding: 0 10px;
   overflow: auto;
   display: flex;
   flex-direction: column;
