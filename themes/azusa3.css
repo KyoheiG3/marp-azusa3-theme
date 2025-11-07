@@ -190,15 +190,13 @@ hr {
 /* Tables */
 th {
   border: 2px solid var(--color-border) !important;
-  border-color: var(--color-border) !important;
   background-color: var(--color-text-light);
   color: var(--color-bg-dark);
   font-weight: bold;
 }
 
 td {
-  border: 2px solid var(--color-border) !important;
-  border-color: var(--color-border) !important;
+  border: 1px solid var(--color-text-light) !important;
   background-color: var(--color-bg-section);
   font-weight: normal;
 }
@@ -351,6 +349,11 @@ section.table table {
   margin-bottom: auto !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+section.table > p {
+  padding: 36px;
+  font-size: 36px;
 }
 
 section.table table th,
