@@ -180,6 +180,49 @@ pre code .hljs-params {
   color: #9cdcfe;
 }
 
+/* Dart-specific syntax highlighting */
+pre code .hljs-built_in.hljs-type {
+  color: #4ec9b0;
+}
+
+pre code .hljs-title.function_ {
+  color: #dcdcaa;
+}
+
+pre code .hljs-operator {
+  color: #d4d4d4;
+}
+
+pre code .hljs-punctuation {
+  color: #d4d4d4;
+}
+
+/* Enhanced Dart syntax highlighting */
+pre code.language-dart .hljs-built_in {
+  color: #4ec9b0;
+  font-weight: normal;
+}
+
+/* Dart property access */
+pre code .hljs-property {
+  color: #9cdcfe;
+}
+
+/* Dart function calls (enhanced) */
+pre code .hljs-title.function_ {
+  color: #dcdcaa;
+}
+
+/* Dart class names (enhanced) */
+pre code .hljs-title.class_ {
+  color: #4ec9b0;
+}
+
+/* Dart variables */
+pre code .hljs-variable {
+  color: #9cdcfe;
+}
+
 /* Horizontal Rule */
 hr {
   all: unset;

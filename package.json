@@ -1,0 +1,29 @@
+{
+  "name": "marp-azusa3-theme",
+  "version": "1.0.0",
+  "description": "Azusa3 theme for Marp",
+  "main": "marp.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyoheiG3/marp-azusa3-theme.git"
+  },
+  "homepage": "https://github.com/KyoheiG3/marp-azusa3-theme",
+  "bugs": {
+    "url": "https://github.com/KyoheiG3/marp-azusa3-theme/issues"
+  },
+  "keywords": [
+    "marp",
+    "theme",
+    "dart",
+    "flutter"
+  ],
+  "author": "Kyohei Ito",
+  "license": "MIT",
+  "dependencies": {
+    "@marp-team/marp-core": "^4.2.0",
+    "highlight.js": "^11.11.0"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.0"
+  }
+}
