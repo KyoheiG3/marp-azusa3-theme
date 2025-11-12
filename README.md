@@ -186,7 +186,8 @@ function greet(name: string): void {
 ├── themes/
 │   └── azusa3/
 │       └── style.css        # テーマのスタイル定義
-├── dart-highlighter.js      # Dart用カスタムシンタックスハイライト
+├── highlighter
+│   └── dart.js              # Dart用シンタックスハイライター
 ├── marp.config.js           # Marp設定ファイル
 ├── example.md               # 日本語サンプル
 └── example.en.md            # 英語サンプル
