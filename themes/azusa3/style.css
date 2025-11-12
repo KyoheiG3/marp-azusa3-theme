@@ -507,51 +507,51 @@ section.image-left > .content {
 }
 
 /* Width adjustments - Grid columns */
-section.image-right.content-20 {
+section.image-right.image-20 {
   grid-template-columns: 80fr 20fr;
 }
 
-section.image-left.content-20 {
+section.image-left.image-20 {
   grid-template-columns: 20fr 80fr;
 }
 
-section.image-right.content-30 {
+section.image-right.image-30 {
   grid-template-columns: 70fr 30fr;
 }
 
-section.image-left.content-30 {
+section.image-left.image-30 {
   grid-template-columns: 30fr 70fr;
 }
 
-section.image-right.content-40 {
+section.image-right.image-40 {
   grid-template-columns: 60fr 40fr;
 }
 
-section.image-left.content-40 {
+section.image-left.image-40 {
   grid-template-columns: 40fr 60fr;
 }
 
-section.image-right.content-60 {
+section.image-right.image-60 {
   grid-template-columns: 40fr 60fr;
 }
 
-section.image-left.content-60 {
+section.image-left.image-60 {
   grid-template-columns: 60fr 40fr;
 }
 
-section.image-right.content-70 {
+section.image-right.image-70 {
   grid-template-columns: 30fr 70fr;
 }
 
-section.image-left.content-70 {
+section.image-left.image-70 {
   grid-template-columns: 70fr 30fr;
 }
 
-section.image-right.content-80 {
+section.image-right.image-80 {
   grid-template-columns: 20fr 80fr;
 }
 
-section.image-left.content-80 {
+section.image-left.image-80 {
   grid-template-columns: 80fr 20fr;
 }
 
