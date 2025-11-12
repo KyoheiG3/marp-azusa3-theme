@@ -1,6 +1,7 @@
 const { Marp } = require('@marp-team/marp-core');
 const hljs = require('highlight.js');
 const { registerDartLanguage } = require('./highlighter/dart');
+const path = require('path');
 
 // Register custom Dart language definition
 hljs.registerLanguage('dart', registerDartLanguage);
@@ -24,5 +25,8 @@ module.exports = {
     }});
 
     return marp;
-  }
+  },
+  themeSet: [
+    path.resolve(__dirname, 'themes')
+  ]
 };
