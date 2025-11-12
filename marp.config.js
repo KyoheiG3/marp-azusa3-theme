@@ -1,6 +1,6 @@
 const { Marp } = require('@marp-team/marp-core');
 const hljs = require('highlight.js');
-const { registerDartLanguage } = require('./dart-highlighter');
+const { registerDartLanguage } = require('./highlighter/dart');
 
 // Register custom Dart language definition
 hljs.registerLanguage('dart', registerDartLanguage);
