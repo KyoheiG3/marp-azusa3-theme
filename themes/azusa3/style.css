@@ -359,19 +359,22 @@ section.agenda li:not(:has(strong)) {
   opacity: 0.4;
 }
 
-section:not(.title):not(.section):not(.centered) > h1:first-child {
+section:not(.title):not(.section):not(.centered) > h1:first-child,
+section:not(.title):not(.section):not(.centered) > header + h1 {
   border-bottom: var(--color-accent) solid 3px;
   padding: 0 0 12px 12px;
   margin: 0 0 36px 0;
 }
 
-section:not(.title):not(.section):not(.centered):not(.agenda) > h2:first-child {
+section:not(.title):not(.section):not(.centered) > h2:first-child,
+section:not(.title):not(.section):not(.centered) > header + h2 {
   border-left: var(--color-accent) solid 8px;
   padding: 12px 32px;
   margin: 0 0 32px 12px;
 }
 
-section:not(.title):not(.section):not(.centered) > h3:first-child {
+section:not(.title):not(.section):not(.centered) > h3:first-child,
+section:not(.title):not(.section):not(.centered) > header + h3 {
   width: fit-content;
   border-bottom: var(--color-accent) solid 3px;
   padding: 0 0 8px 8px;
@@ -432,8 +435,8 @@ section.image-left > h1 {
 }
 
 /* Apply negative margin to image container only when there is no heading */
-section.image-right:not(:has(> h1)) > p,
-section.image-left:not(:has(> h1)) > p {
+section.image-right:not(:has(> h1)):not(:has(> header)) > p,
+section.image-left:not(:has(> h1)):not(:has(> header)) > p {
   margin-top: -40px !important;
 }
 
@@ -452,12 +455,6 @@ section.image-left img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-}
-
-/* Hide br tags only in image layouts */
-section.image-right > p br,
-section.image-left > p br {
-  display: none;
 }
 
 /* Text container */
@@ -654,9 +651,8 @@ section.code pre {
   border: 20px solid var(--color-border);
   flex: 1;
   margin: 0 -20px;
-  padding: 0 10px;
+  padding: 10px;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
