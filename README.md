@@ -24,6 +24,38 @@
 }
 ```
 
+### 高度な設定（HTML/PDF出力時のシンタックスハイライト強化）
+
+HTML や PDF の出力時に、より高度なシンタックスハイライトを有効にするには、このパッケージをインストールして設定します。
+
+1. パッケージをインストール:
+
+```bash
+# HTTPS を使用
+npm install git+https://github.com/KyoheiG3/marp-azusa3-theme.git
+
+# または SSH を使用
+npm install git+git@github.com:KyoheiG3/marp-azusa3-theme.git
+```
+
+2. プロジェクトルートに `marp.config.js` を作成:
+
+```javascript
+module.exports = require('marp-azusa3-theme/marp.config.js');
+```
+
+3. Marp CLI で出力:
+
+```bash
+# HTML として出力
+marp example.md -o output.html
+
+# PDF として出力
+marp example.md -o output.pdf
+```
+
+**注意**: 現在、強化されたハイライトが適用されるのは Dart 言語のみです。その他の言語は VSCode などのプレビューで表示される状態で出力されます。
+
 ## 使い方
 
 Markdown ファイルのフロントマターでテーマを指定します:

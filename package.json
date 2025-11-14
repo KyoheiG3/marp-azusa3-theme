@@ -19,6 +19,10 @@
   ],
   "author": "Kyohei Ito",
   "license": "MIT",
+  "scripts": {
+    "marp:html": "marp example.md -o example.html",
+    "marp:pdf": "marp example.md -o example.pdf"
+  },
   "dependencies": {
     "@marp-team/marp-core": "^4.2.0",
     "highlight.js": "^11.11.0"

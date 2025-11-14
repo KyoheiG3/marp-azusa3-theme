@@ -1,3 +1,4 @@
 .claude
 *.html
+*.pdf
 node_modules/
