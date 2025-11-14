@@ -38,12 +38,15 @@ jobs:
         run: pnpm install
 
       - name: Build HTML
-        run: pnpm run marp:html
+        run: |
+          pnpm run marp:html
+          pnpm run marp:en:html
 
       - name: Prepare deployment directory
         run: |
-          mkdir -p deploy
+          mkdir -p deploy/en
           cp example.html deploy/index.html
+          cp example.en.html deploy/en/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0

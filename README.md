@@ -1,5 +1,7 @@
 # Marp Azusa3 Theme
 
+[English](README.en.md) | **日本語**
+
 [Azusa 3](https://azusa3.sanographix.net/) のデザインを Marp 用テーマとして実装したものです。
 
 ## 特徴
@@ -24,7 +26,7 @@
 }
 ```
 
-### 高度な設定（HTML/PDF出力時のシンタックスハイライト強化）
+### 高度な設定（HTML/PDF 出力時のシンタックスハイライト強化）
 
 HTML や PDF の出力時に、より高度なシンタックスハイライトを有効にするには、このパッケージをインストールして設定します。
 
@@ -41,7 +43,7 @@ npm install git+git@github.com:KyoheiG3/marp-azusa3-theme.git
 2. プロジェクトルートに `marp.config.js` を作成:
 
 ```javascript
-module.exports = require('marp-azusa3-theme/marp.config.js');
+module.exports = require("marp-azusa3-theme/marp.config.js");
 ```
 
 3. Marp CLI で出力:
@@ -208,6 +210,7 @@ function greet(name: string): void {
 
 - [example.md](example.md) - 日本語のサンプル
 - [example.en.md](example.en.md) - 英語のサンプル
+- [デモページ](https://kyoheig3.github.io/marp-azusa3-theme/) - オンラインで表示を確認
 
 詳細な使用例は上記のサンプルファイルをご覧ください。
 
